@@ -1,0 +1,98 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Compatibility Test</title>
+  <link rel="stylesheet" href="compatibility.css" />
+</head>
+<body>
+  
+
+  
+ <header class="site-header">
+        <nav class="main-nav" aria-label="Main Navigation">
+            <a href="profile1.html" class="nav-brand">HAM SE DOSTI KIJEYGA</a>
+            <ul class="nav-list">
+                <li><a href="mannual.html" class="nav-link">About Me</a></li>
+                <li><a href="perks.html" class="nav-link">The Perks</a></li>
+                <li><a href="compatability.html" class="nav-link">Compatibilitometer</a></li>
+                <li><a href="ready.html" class="nav-link highlight">Say Yes</a></li>
+            </ul>
+        </nav>
+    </header>
+  </header>
+<section class="compatibility">
+
+  <h2>Compatibilitometer</h2>
+  <p class="sub"> <strong>“No lies allowed, only sweet honesty ”</strong></p>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <!-- QUESTION 1 -->
+ <div class="question-card active" data-question="1">
+  <h3>🎀👧 ARE U A GIRL 👧🎀</h3>
+  <button data-choice="A" onclick="selectAnswer(1, 'A')">Yes</button>
+  <button data-choice="B" onclick="selectAnswer(1, 'B')">No</button>
+</div>
+
+<div class="question-card" data-question="2">
+  <h3>✝️⚰️ARE U ALIVE ?⚰️✝️</h3>
+  <button data-choice="A" onclick="selectAnswer(2, 'A')">Yes</button>
+  <button data-choice="B" onclick="selectAnswer(2, 'B')">No</button>
+</div>
+  <!-- RESULT -->
+  <div class="result hidden" id="resultBox">
+
+    <!-- CIRCULAR METER -->
+    <div class="circle">
+      <span id="percentage">0%</span>
+    </div>
+
+    <p class="result-line" id="resultLine"></p>
+
+    <!-- OUTCOMES (EDIT HERE LATER) -->
+    <!-- MARK YOUR CORRECT OUTCOME -->
+    <div id="outcomes" hidden>
+
+      <div data-combo="AA" data-prob="100" data-correct="true">
+        Elite match. Scary chemistry.
+        
+      </div>
+
+      <div data-combo="AB" data-prob="100">
+       “You may be dead, but my feelings are very much alive.”
+      </div>
+
+      <div data-combo="BA" data-prob="0.0">
+        Ahh.... hell na bro!!
+      </div>
+
+      <div data-combo="BB" data-prob="0.0">
+       <strong>Matt kar lala mat kar 😂</strong>  </div> </div>
+      </div>
+
+    </div>
+    <button id="nextBtn" class="next-btn hidden" onclick="goNext()">
+  💖 Ready To Commit !! 💖
+</button>
+  </div>
+   <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 HAM SE DOSTI KIJEYGA . All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/jai_gupta_11/" aria-label="Instagram">Instagram</a>
+                <a href="https://tinder.com/@jaygupta" aria-label="Twitter">Tinder</a>
+                <a href="https://www.linkedin.com/in/jay-gupta-198327381" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</section>
+
+
+</body>
+<script src="combatiblity.js"></script>
+</html>

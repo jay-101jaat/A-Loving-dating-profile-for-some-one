@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ready.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Main Navigation">
+            <a href="profile1.html" class="nav-brand">HAM SE DOSTI KIJEYGA</a>
+             <ul class="nav-list">
+                <li><a href="mannual.html" class="nav-link">About Me</a></li>
+                <li><a href="perks.html" class="nav-link">The Perks</a></li>
+                <li><a href="compatability.html" class="nav-link">Compatibilitometer</a></li>
+                <li><a href="ready.html" class="nav-link highlight">Say Yes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="proposal" class="proposal-section">
+        <div class="container">
+            <div class="proposal-card">
+                <h2 class="proposal-title">Ready to Commit?</h2>
+                <p class="proposal-text">Let's grab a coffee and see if we can deploy to production.</p>
+                <div class="proposal-actions" style="text-align: center; margin: 50px 0;">
+
+                    <button id="yesBtn" class="btn btn-primary" onclick="chooseTheOne()">Am I the one?</button>
+
+                    <button id="rejectBtn" class="btn btn-secondary">Reject Me</button>
+                </div>
+
+                <button id="revealBtn">Tell me a secret 🤍</button>
+                <div id="secretText" class="secret hidden"></div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        const messages = [
+            "You’re part of my world.",
+            "You exist beyond this screen.",
+            "This isn’t just digital for me."
+        ];
+
+        document.getElementById("revealBtn").addEventListener("click", () => {
+            const textBox = document.getElementById("secretText");
+
+            const randomMessage =
+                messages[Math.floor(Math.random() * messages.length)];
+
+            textBox.innerText = randomMessage;
+            textBox.classList.remove("hidden");
+
+            // slight delay so transition feels natural
+            setTimeout(() => {
+                textBox.classList.add("show");
+            }, 50);
+
+        });
+    </script>
+    <div id="proposalForm" class="contact-form-wrapper hidden">
+        <form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLs1KJW0Rm3I4Z3dBR4P56HAWmbappIRbgEr88_Df5Cy_r9g/formResponse"
+            method="POST" target="hidden_iframe" class="contact-form"
+            onsubmit="submitted=true; setTimeout(showSuccess, 500);">
+            <div class="form-group">
+                <p class="soft-line">Okay… let’s make this real 🤍</p>
+                <label for="name">Your Name</label>
+                <input type="text" name="entry.1230204956" required placeholder="Jane Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="entry.1077934362" required placeholder="jane@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Pick-up Line (Optional)</label>
+                <textarea name="entry.1062650094" rows="3" placeholder="This better work 😌"></textarea>
+            </div>
+
+            <button type="submit" onclick="submitAndRedirect(event)" class="btn btn-flirty btn-large">
+                Send Proposal 💌
+            </button>
+
+        </form>
+        <div id="popupOverlay" class="popup-overlay hidden">
+  <div class="popup-box">
+    <p>Not everyone would pass stage one… but you did 💘</p>
+    <span>Redirecting…</span>
+  </div>
+</div>
+ <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 HAM SE DOSTI KIJEYGA . All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/jai_gupta_11/" aria-label="Instagram">Instagram</a>
+                <a href="https://tinder.com/@jaygupta" aria-label="Twitter">Tinder</a>
+                <a href="https://www.linkedin.com/in/jay-gupta-198327381" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+      <script>
+function submitAndRedirect() {
+  alert("Got it… opening the next chapter 💞");
+  setTimeout(() => {
+    window.location.href = "profile1.html";
+  }, 500);
+}
+</script>
+
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+        
+        
+        
+
+        <audio id="heartbeat" src="heartbeat.mp3" preload="auto" loop></audio>
+        <script src="ready.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1510 @@
+/* Page base */
+body {
+  background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+  color: #f5f5f5;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  text-align: center;
+  padding-top: 80px;
+}
+
+/* Main container */
+.proposal-card {
+  max-width: 520px;
+  margin: auto;
+  padding: 40px 30px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(255, 77, 109, 0.15);
+}
+
+/* Title */
+.proposal-card h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px rgba(255, 77, 109, 0.5);
+}
+
+/* Subtitle */
+.proposal-card p {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+/* Buttons container */
+.proposal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.proposal-actions button {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+/* Hover flirt 😏 */
+.proposal-actions button:hover {
+  background: #ff4d6d;
+  border-color: #ff4d6d;
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.6);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Quote */
+.proposal-quote {
+  margin-top: 25px;
+  font-style: italic;
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+/* Emoji pulse */
+.proposal-quote span {
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+button {
+  padding: 14px 26px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,77,109,0.15);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgba(255,77,109,0.35);
+  box-shadow: 0 0 18px rgba(255,77,109,0.4);
+}
+#rejectBtn {
+  position: relative;
+  transition: transform 0.25s ease;
+}
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 20px;
+  animation: fall 3s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+button {
+  padding: 14px 26px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(191, 10, 43, 0.825);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 5s ease;
+}
+
+button:hover {
+  background: rgba(224, 5, 45, 0.848);
+  box-shadow: 0 0 18px rgba(255,77,109,0.4);
+}
+.secret {
+  margin-top: 18px;
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.secret.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+.secret.show {
+  text-shadow: 0 0 8px rgba(255, 77, 109, 0.4);
+}
+.secret {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #ff4d6d;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  font-weight: 500;
+  text-align: center;
+}
+
+.secret.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
+#revealBtn {
+  margin-top: 15px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.contact-form-wrapper {
+  max-width: 420px;
+  margin: 40px auto 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.contact-form-wrapper.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+.soft-line {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.5s ease;
+}
+
+.contact-form-wrapper.show .soft-line {
+  opacity: 0.85;
+  transform: translateY(0);
+}
+/* Wrapper around the form */
+.contact-form-wrapper {
+  margin-top: 40px;
+  padding: 28px 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.08);
+  backdrop-filter: blur(8px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* Soft intro line */
+.soft-line {
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.75;
+  margin-bottom: 22px;
+  letter-spacing: 0.3px;
+}
+
+/* Form spacing */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Input groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Labels */
+.form-group label {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-bottom: 6px;
+  letter-spacing: 0.4px;
+}
+
+/* Inputs & textarea */
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 14px 16px;
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* Focus glow */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff4d6d;
+  background: rgba(255, 77, 109, 0.08);
+  box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.15);
+}
+
+/* Placeholder vibe */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Submit button */
+.btn-flirty {
+  margin-top: 10px;
+  padding: 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff4d6d, #ff85a1);
+  box-shadow: 0 12px 30px rgba(255, 77, 109, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button hover */
+.btn-flirty:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 40px rgba(255, 77, 109, 0.45);
+}
+
+/* Button active */
+.btn-flirty:active {
+  transform: scale(0.97);
+}
+
+/* Reveal animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.popup-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-box {
+  background: #111;
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 20px 60px rgba(255, 100, 150, 0.35);
+  animation: popIn 0.4s ease;
+}
+
+.popup-box span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}
+.site-footer {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--bg-tertiary);
+    margin-top: var(--spacing-xl);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.social-links {
+    margin-top: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.social-links a:hover {
+    color: var(--accent-primary);
+}
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(15, 17, 21, 0.85); /* Glassmorphism effect */
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--bg-tertiary);
+    padding: var(--spacing-md) 0;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.nav-brand {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--accent-primary);
+    font-size: 1.1rem;
+}
+
+.nav-list {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.nav-link:hover {
+    color: var(--accent-primary);
+}
+
+.nav-link.highlight {
+    color: var(--accent-primary);
+    font-weight: bold;
+}
+/* =========================================
+   1. CSS Variables & Reset
+   ========================================= */
+:root {
+    /* Color Palette */
+    --bg-primary: #0f1115;    /* Deep charcoal (Main Background) */
+    --bg-secondary: #161b22;  /* Slightly lighter (Cards/Sections) */
+    --bg-tertiary: #30363d;   /* Borders and inputs */
+    
+    --text-primary: #f0f6fc;  /* Off-white for readability */
+    --text-secondary: #8b949e;/* Muted grey for subtext */
+    
+    --accent-primary: #ff3366; /* Deep Neon Red/Pink */
+    --accent-hover: #ff5c8d;   /* Lighter Red for hover states */
+    --accent-glow: rgba(255, 51, 102, 0.25); /* Subtle glow effect */
+    
+    --code-bg: #0d1117;        /* Blacker background for code blocks */
+    --code-text: #7ee787;      /* Matrix green for code text */
+
+    /* Typography */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: 'Fira Code', 'Courier New', monospace;
+
+    /* Spacing & Layout */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+    --border-radius: 8px;
+    --max-width: 800px;        /* Keeping the reading column narrow & elegant */
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   2. Typography & Utilities
+   ========================================= */
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+    letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; color: var(--text-primary); }
+h3 { font-size: 1.5rem; }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+ul { list-style: none; }
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-family: var(--font-mono); /* Tech feel */
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-primary);
+    color: white;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--accent-glow);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+/* =========================================
+   ADD TO YOUR CSS FILE (Anywhere is fine, 
+   but near other .btn styles is best)
+   ========================================= */
+
+.btn-flirty {
+    position: relative;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-mono), sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white;
+    border: none;
+    border-radius: 50px; /* Pill shape = friendly/inviting */
+    cursor: pointer;
+    
+    /* The "Flirty" Gradient: 
+       We make it wider (200%) so we can animate it moving side-to-side */
+    background: linear-gradient(90deg, #ff3366, #ff6b6b, #d90429, #ff3366);
+    background-size: 300% 100%;
+    
+    /* Smooth transition for all changes */
+    transition: all 0.4s ease-in-out;
+    
+    /* Initial subtle shadow */
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+}
+
+/* HOVER STATE: The "Wink" */
+.btn-flirty:hover {
+    /* Moves the gradient to create a shimmering "alive" effect */
+    background-position: 100% 0;
+    
+    /* Lifts up slightly */
+    transform: translateY(-3px) scale(1.02);
+    
+    /* The Glow expands */
+    box-shadow: 0 8px 25px rgba(255, 51, 102, 0.6);
+}
+
+/* ACTIVE STATE: The "Yes" */
+.btn-flirty:active {
+    /* Buttons should feel tactile when clicked */
+    transform: scale(0.95) translateY(0);
+    box-shadow: 0 2px 10px rgba(255, 51, 102, 0.4);
+}
+
+/* OPTIONAL: A playful shine effect using pseudo-elements */
+.btn-flirty::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.btn-flirty:hover::after {
+    left: 100%; /* Shoots a shine across the button */
+    transition: 0.5s ease-in-out;
+}
+/* =========================================
+   ADD TO YOUR CSS FILE (Anywhere is fine, 
+   but near other .btn styles is best)
+   ========================================= */
+
+.btn-flirty {
+    position: relative;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-mono), sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white;
+    border: none;
+    border-radius: 50px; /* Pill shape = friendly/inviting */
+    cursor: pointer;
+    
+    /* The "Flirty" Gradient: 
+       We make it wider (200%) so we can animate it moving side-to-side */
+    background: linear-gradient(90deg, #ff3366, #ff6b6b, #d90429, #ff3366);
+    background-size: 300% 100%;
+    
+    /* Smooth transition for all changes */
+    transition: all 0.4s ease-in-out;
+    
+    /* Initial subtle shadow */
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+}
+
+/* HOVER STATE: The "Wink" */
+.btn-flirty:hover {
+    /* Moves the gradient to create a shimmering "alive" effect */
+    background-position: 100% 0;
+    
+    /* Lifts up slightly */
+    transform: translateY(-3px) scale(1.02);
+    
+    /* The Glow expands */
+    box-shadow: 0 8px 25px rgba(255, 51, 102, 0.6);
+}
+
+/* ACTIVE STATE: The "Yes" */
+.btn-flirty:active {
+    /* Buttons should feel tactile when clicked */
+    transform: scale(0.95) translateY(0);
+    box-shadow: 0 2px 10px rgba(255, 51, 102, 0.4);
+}
+
+/* OPTIONAL: A playful shine effect using pseudo-elements */
+.btn-flirty::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.btn-flirty:hover::after {
+    left: 100%; /* Shoots a shine across the button */
+    transition: 0.5s ease-in-out;
+}
+/* =========================================
+   ADD TO YOUR CSS FILE (Anywhere is fine, 
+   but near other .btn styles is best)
+   ========================================= */
+
+.btn-flirty {
+    position: relative;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-mono), sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white;
+    border: none;
+    border-radius: 50px; /* Pill shape = friendly/inviting */
+    cursor: pointer;
+    
+    /* The "Flirty" Gradient: 
+       We make it wider (200%) so we can animate it moving side-to-side */
+    background: linear-gradient(90deg, #ff3366, #ff6b6b, #d90429, #ff3366);
+    background-size: 300% 100%;
+    
+    /* Smooth transition for all changes */
+    transition: all 0.4s ease-in-out;
+    
+    /* Initial subtle shadow */
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+}
+
+/* HOVER STATE: The "Wink" */
+.btn-flirty:hover {
+    /* Moves the gradient to create a shimmering "alive" effect */
+    background-position: 100% 0;
+    
+    /* Lifts up slightly */
+    transform: translateY(-3px) scale(1.02);
+    
+    /* The Glow expands */
+    box-shadow: 0 8px 25px rgba(255, 51, 102, 0.6);
+}
+
+/* ACTIVE STATE: The "Yes" */
+.btn-flirty:active {
+    /* Buttons should feel tactile when clicked */
+    transform: scale(0.95) translateY(0);
+    box-shadow: 0 2px 10px rgba(255, 51, 102, 0.4);
+}
+
+/* OPTIONAL: A playful shine effect using pseudo-elements */
+.btn-flirty::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.btn-flirty:hover::after {
+    left: 100%; /* Shoots a shine across the button */
+    transition: 0.5s ease-in-out;
+}
+/* =========================================
+   ADD TO YOUR CSS FILE (Anywhere is fine, 
+   but near other .btn styles is best)
+   ========================================= */
+
+.btn-flirty {
+    position: relative;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-mono), sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white;
+    border: none;
+    border-radius: 50px; /* Pill shape = friendly/inviting */
+    cursor: pointer;
+    
+    /* The "Flirty" Gradient: 
+       We make it wider (200%) so we can animate it moving side-to-side */
+    background: linear-gradient(90deg, #ff3366, #ff6b6b, #d90429, #ff3366);
+    background-size: 300% 100%;
+    
+    /* Smooth transition for all changes */
+    transition: all 0.4s ease-in-out;
+    
+    /* Initial subtle shadow */
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+}
+
+/* HOVER STATE: The "Wink" */
+.btn-flirty:hover {
+    /* Moves the gradient to create a shimmering "alive" effect */
+    background-position: 100% 0;
+    
+    /* Lifts up slightly */
+    transform: translateY(-3px) scale(1.02);
+    
+    /* The Glow expands */
+    box-shadow: 0 8px 25px rgba(255, 51, 102, 0.6);
+}
+
+/* ACTIVE STATE: The "Yes" */
+.btn-flirty:active {
+    /* Buttons should feel tactile when clicked */
+    transform: scale(0.95) translateY(0);
+    box-shadow: 0 2px 10px rgba(255, 51, 102, 0.4);
+}
+
+/* OPTIONAL: A playful shine effect using pseudo-elements */
+.btn-flirty::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.btn-flirty:hover::after {
+    left: 100%; /* Shoots a shine across the button */
+    transition: 0.5s ease-in-out;
+}
+body {
+    padding-top: var(--header-height);
+}
+.markdown-body {
+    margin-top: var(--header-height);
+}
+.readme-title,
+h2 {
+    scroll-margin-top: var(--header-height);
+}
+
+/* =========================================
+   3. Header & Navigation
+   ========================================= */
+.site-header {
+    position: fixed;
+    height: var(--header-height);
+    top: 0;
+    width: 100%;
+    background-color: rgba(15, 17, 21, 0.85); /* Glassmorphism effect */
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--bg-tertiary);
+    padding: var(--spacing-md) 0;
+}
+:root {
+    --header-height: 72px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.nav-brand {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--accent-primary);
+    font-size: 1.1rem;
+}
+
+.nav-list {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.nav-link:hover {
+    color: var(--accent-primary);
+}
+
+.nav-link.highlight {
+    color: var(--accent-primary);
+    font-weight: bold;
+}
+
+/* =========================================
+   REPLACE THE PREVIOUS HERO SECTION (Step 4)
+   WITH THIS BLOCK
+   ========================================= */
+
+.hero-section {
+    /* Full viewport height minus header */
+    min-height: 100vh;
+    padding-top: 80px; 
+    
+    /* Flexbox centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    /* Romantic Dark Gradient Background */
+    background: linear-gradient(
+        135deg, 
+        var(--bg-primary) 0%, 
+        #1a0505 50%,   /* Very dark red */
+        #180818 100%   /* Deep purple */
+    );
+    
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional: subtle background glow orb */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 51, 102, 0.08) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Let clicks pass through */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Ensure text sits above the glow */
+    max-width: 700px;
+    padding: 0 var(--spacing-md);
+    
+    /* Subtle entrance animation */
+    opacity: 0; 
+    animation: fadeInUp 1s ease-out forwards; 
+}
+
+.hero-headline {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.1;
+    .cursor {
+  display: inline-block;
+  background-color: var(--accent-primary);
+  width: 3px;
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+.cursor.typing {
+  animation: none; /* Stop blinking while typing */
+}
+
+@keyframes blink {
+  0%  { opacity: 1; }
+  49% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+    
+    /* Gradient Text */
+    background: linear-gradient(to right, #ffffff, #ffccd5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Text Shadow for depth */
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtext {
+    font-size: 1.25rem;
+    color: #b0b0b0; /* Slightly lighter than standard grey */
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animated Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-primary), #d90429);
+    border: none;
+    box-shadow: 0 0 20px rgba(255, 51, 102, 0.4);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 30px rgba(255, 51, 102, 0.6);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Simple Keyframe Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-headline {
+        font-size: 2.5rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* =========================================
+   5. About Section (README.md Style)
+   ========================================= */
+.readme-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.repo-file-header {
+     background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: none;
+
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.markdown-body {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--bg-tertiary);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    padding: var(--spacing-lg);
+}
+
+.readme-title {
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--bg-tertiary);
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.badge-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.badge-success { background-color: #238636; color: white; }
+.badge-blue { background-color: #1f6feb; color: white; }
+.badge-orange { background-color: #d29922; color: black; }
+
+code {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+}
+
+/* Code Block Styling */
+.code-block {
+    background-color: var(--code-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    overflow-x: auto;
+    border: 1px solid var(--bg-tertiary);
+}
+
+pre {
+    margin: 0;
+    color: var(--code-text);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+blockquote {
+    border-left: 4px solid var(--accent-primary);
+    padding-left: var(--spacing-md);
+    color: var(--text-secondary);
+    margin: var(--spacing-md) 0;
+    background: rgba(255, 51, 102, 0.05); /* Slight tint of red */
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--bg-tertiary);
+    margin: var(--spacing-lg) 0;
+}
+
+.specs-list {
+    margin-left: var(--spacing-md);
+}
+
+.specs-list li {
+    margin-bottom: var(--spacing-sm);
+    list-style-type: disc;
+    color: var(--text-secondary);
+}
+
+.specs-list li strong {
+    color: var(--text-primary);
+}
+/* =========================================
+   ADD/REPLACE IN 'FEATURES' OR 'CARDS' SECTION
+   ========================================= */
+
+/* The Glass Card Container */
+.feature-card, 
+.proposal-card {
+    /* Glass Effect Core */
+    background: rgba(255, 255, 255, 0.03);   /* Very transparent white */
+    backdrop-filter: blur(16px);             /* The "Frost" blur */
+    -webkit-backdrop-filter: blur(16px);     /* Safari support */
+    
+    /* Border & Shape */
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle border ring */
+    border-radius: 16px;                     /* Modern rounded corners */
+    padding: var(--spacing-lg);
+    
+    /* Deep soft shadow */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    
+    /* Animation Properties */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease,
+                background 0.3s ease;
+}
+
+/* Hover Animation */
+.feature-card:hover, 
+.proposal-card:hover {
+    transform: translateY(-8px); /* Float upwards */
+    
+    /* Increased brightness and shadow on hover */
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
+                0 0 20px rgba(255, 51, 102, 0.1); /* Subtle accent color glow */
+}
+
+/* Layout for Feature Cards (Grid) */
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+}
+
+/* Typography Inside Cards */
+.feature-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.feature-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+
+/* =========================================
+   6. Proposal / Contact Form
+   ========================================= */
+.proposal-section {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.proposal-card {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--bg-tertiary);
+}
+
+.contact-form {
+    text-align: left;
+    max-width: 500px;
+    margin: var(--spacing-lg) auto 0;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--bg-tertiary);
+    border-radius: var(--border-radius);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    transition: border-color var(--transition-fast);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.btn-large {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   7. Footer
+   ========================================= */
+.site-footer {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--bg-tertiary);
+    margin-top: var(--spacing-xl);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.social-links {
+    margin-top: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.social-links a:hover {
+    color: var(--accent-primary);
+}
+
+/* =========================================
+   8. Mobile Responsive Adjustments
+   ========================================= */
+@media (max-width: 768px) {
+    .hero-headline {
+        font-size: 2rem;
+    }
+    
+    .nav-list {
+        display: none; /* In a real app, you would add a mobile hamburger menu here */
+    }
+
+    .markdown-body {
+        padding: var(--spacing-md);
+    }
+    
+    .hero-section {
+        padding-top: 120px;
+    }
+}
+/* =========================================
+   ADD BEFORE MEDIA QUERIES (Bottom of file)
+   ========================================= */
+
+/* The "Romantic Bloom" Utility Class */
+.romantic-glow {
+    /* Smooth, "springy" transition (feels organic) */
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.romantic-glow:hover {
+    /* 1. The Lift (Gentle float upwards) */
+    transform: translateY(-6px) scale(1.02);
+    
+    /* 2. The Aura (Double-layered shadow for depth) */
+    box-shadow: 
+        /* Inner warmth (closer, more intense) */
+        0 10px 20px -5px rgba(255, 51, 102, 0.5), 
+        /* Outer atmosphere (wide, very soft) */
+        0 20px 50px -10px rgba(255, 51, 102, 0.2);
+        
+    /* 3. The Highlight (Border brightens slightly) */
+    border-color: rgba(255, 255, 255, 0.5);
+    
+    /* 4. Background Adjustment (Optional: slight lighten) */
+    filter: brightness(1.1);
+}
+/* Utility to hide elements initially */
+.hidden {
+    display: none;
+}
+.playground-section {
+    background-color: rgba(255, 255, 255, 0.02); /* Very subtle highlight */
+    margin: var(--spacing-lg) 0;
+}
+
+
+/* =========================================
+   ADD THIS AT THE VERY BOTTOM OF STYLES.CSS
+   ========================================= */
+
+/* Mobile Breakpoint (Tablets and smaller) */
+@media screen and (max-width: 768px) {
+
+    /* 1. Global Spacing Adjustments */
+    :root {
+        --spacing-lg: 1.5rem; /* Reduce large gaps */
+        --spacing-xl: 3rem;   /* Reduce extra large gaps */
+    }
+
+    .container {
+        width: 90%;
+        padding: 0; /* Remove extra side padding on small screens */
+    }
+
+    /* 2. Typography Scaling */
+    h1, .hero-headline {
+        font-size: 2.2rem; /* Shrink giant headlines */
+    }
+
+    h2, .section-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtext {
+        font-size: 1rem;
+        padding: 0 var(--spacing-sm); /* Ensure text doesn't touch edges */
+    }
+
+    /* 3. Navigation Stack */
+    .main-nav {
+        flex-direction: column;
+        padding: var(--spacing-md) 0;
+    }
+
+    .nav-list {
+        margin-top: var(--spacing-sm);
+        gap: var(--spacing-md);
+        font-size: 0.85rem;
+    }
+
+    /* 4. Hero Section */
+    .hero-section {
+        padding-top: 140px; /* Account for taller stacked nav */
+        min-height: auto;   /* Allow content to determine height */
+        padding-bottom: var(--spacing-xl);
+    }
+
+    .hero-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        width: 100%;
+        gap: var(--spacing-sm);
+    }
+
+    .btn {
+        width: 100%;       /* Full width buttons are easier to tap */
+        text-align: center;
+    }
+
+    /* 5. About Section (Readme) */
+    .readme-section .container {
+        width: 100%; /* Use full screen width */
+    }
+    
+    .markdown-body {
+        border-radius: 0; /* Remove corners if edge-to-edge */
+        border-left: none;
+        border-right: none;
+    }
+
+    /* 6. Features Grid */
+    .features-list {
+        grid-template-columns: 1fr; /* Force single column */
+    }
+
+    /* 7. Stats Grid (About Section) */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2x2 grid instead of 4x1 */
+        gap: var(--spacing-md);
+    }
+    
+    /* 8. Quiz & Forms */
+    .quiz-group {
+        padding: var(--spacing-md); /* Less internal padding */
+    }
+    
+    .radio-label {
+        padding: 10px; /* Larger tap targets for radio buttons */
+    }
+
+    .proposal-card {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Small Mobile Breakpoint (Phones) */
+@media screen and (max-width: 480px) {
+    h1, .hero-headline {
+        font-size: 1.8rem;
+    }
+
+    .nav-list {
+        gap: var(--spacing-sm);
+        flex-wrap: wrap; /* Allow wrapping if menu items are long */
+        justify-content: center;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr; /* Stack stats vertically on tiny screens */
+    }
+}
+/* =========================================
+   BENTO GRID STRUCTURE (LIKE IMAGE 1)
+   ========================================= */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* Each Card */
+.bento-box {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 51, 102, 0.05),
+        rgba(0, 0, 0, 0.6)
+    );
+    
+    border: 1px solid rgba(255, 51, 102, 0.15);
+    border-radius: 16px;
+    padding: 1.5rem;
+    
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Lift Effect */
+.bento-box:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-primary);
+    box-shadow: 0 10px 30px rgba(255, 51, 102, 0.15);
+}
+
+/* Make Perks Box Bigger (Like First Image Layout) */
+.box-perks {
+    grid-column: span 2;
+    text-align: center;
+   
+    
+    border: 1px solid rgba(255, 51, 102, 0.3);
+}
+.box-quick-start {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+.box-issues {
+  grid-column: 2;
+  grid-row: 1;
+}
+.box-contributing {
+  grid-column: 3;
+  grid-row: 1;
+}
+.box-perks {
+  grid-column: 2 / 4;
+  grid-row: 2;
+}
