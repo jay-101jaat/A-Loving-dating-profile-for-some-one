@@ -89,6 +89,7 @@ function submitAndRedirect(e) {
 
   // redirect AFTER popup is visible
   setTimeout(() => {
-    window.location.href = "profile1.html";
+    window.location.href = "index.html";
   }, 2000); // adjust timing if you want
+
 }
